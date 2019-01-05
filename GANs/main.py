@@ -58,7 +58,7 @@ if __name__ == '__main__':
     tf.reset_default_graph()
     batch_size = 64
     n_noise = 64
-    saver = tf.train.Saver()
+
 
     X_in = tf.placeholder(dtype=tf.float32, shape=[None, 28, 28], name='X')
     noise = tf.placeholder(dtype=tf.float32, shape=[None, n_noise])
@@ -88,7 +88,7 @@ if __name__ == '__main__':
 
     sess = tf.Session()
     sess.run(tf.global_variables_initializer())
-
+    saver = tf.train.Saver()
     for i in range(60000):
         train_d = True
         train_g = True
