@@ -11,3 +11,7 @@
 /MNIST_data/train-images-idx3-ubyte.gz
 /MNIST_data/train-labels-idx1-ubyte.gz
 *.gz
+/GANs/checkpoint
+*.ckpt.data*
+*.ckpt.index
+*.ckpt*
