@@ -66,6 +66,7 @@ if __name__ == '__main__':
     keep_prob = tf.placeholder(dtype=tf.float32, name='keep_prob')
     is_training = tf.placeholder(dtype=tf.bool, name='is_training')
 
+
     g = generator(noise, keep_prob, is_training)
     d_real = discriminator(X_in)
     d_fake = discriminator(g, reuse=True)
@@ -109,6 +110,7 @@ if __name__ == '__main__':
         if g_ls * 1.5 < d_ls:
             train_g = False
             pass
+
         if d_ls * 2 < g_ls:
             train_d = False
             pass
